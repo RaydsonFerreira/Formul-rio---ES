@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+<head> 
+  <title>Formulário</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<div class="login-wrap">  
+  <div class="login-html">
+    <div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+          <meta charset="utf-8">
+            <body>
+              <form autocomplete="off">
+                <label for="rg" class="label">RG:</label> 
+                <input id="rg" name="rg" required="" type="text" class="input"/> 
+                <br>
+                <label for="nome" class="label">NOME:</label>
+                <input name="nome" type="text" maxlength="40" placeholder="Digite seu nome" class="input" id="nome"/>
+                <br>
+                <label for="email" class="label">EMAIL:</label>
+                <input type="email" name="email" class="input" id="email"/>
+                <br>
+                <label for="nascimento" class="label">NASCIMENTO:</label>
+                <input type="text" maxlength="2" size="2" name="diaNascimento" class="data" id="diaNascimento" pattern="[0-3]{1}[0-9]{1}" oninvalid="setCustomValidity('Formato Inválido, digite um valor entre 01 e 31 (valores entre 1 e 9 devem vir acompanhados de um 0 (zero) a esquerda)!')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="dd"/>/
+                 <input type="text" maxlength="2" size="2" name="mesNascimento" class="data" id="mesNascimento" pattern="[0-1]{1}[0-9]{1}" oninvalid="setCustomValidity('Formato Inválido, digite um valor entre 01 e 12 (valores entre 1 e 9 devem vir acompanhados de um 0 (zero) a esquerda)!')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="mm"/>/
+                 <input type="text" maxlength="4" size="4" name="anoNascimento" class="data" id="anoNascimento" pattern="[1-2]{1}[0-9]{3}" oninvalid="setCustomValidity('Formato Inválido, digite um ano válido!')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="aaaa"/>
+                <br>
+                <br>
+                <label for="estado" class="label">ESTADO:</label><br> 
+                <input id="tab-1" type="radio" name="estado" value"sp" class="estado"><label for="tab-1" class="tab">SP</label>
+                <input id="tab-2" type="radio" name="estado" value"rj" class="estado"><label for="tab-2" class="tab">RJ</label>
+                <input id="tab-3" type="radio" name="estado" value"mg" class="estado"><label for="tab-3" class="tab">MG</label>
+                <input id="tab-4" type="radio" name="estado" value"es" class="estado"><label for="tab-4" class="tab">ES</label>
+                <br>
+                <label for="admissão" class="label">ADMISSÃO:</label>
+                <input type="text" maxlength="2" size="2" name="mesAdm" class="data" id="mesAdm" pattern="[0-1]{1}[0-9]{1}" oninvalid="setCustomValidity('Formato Inválido, digite um valor entre 01 e 12 (valores entre 1 e 9 devem vir acompanhados de um 0 (zero) a esquerda)!')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="mm"/>/
+                <input type="text" maxlength="2" size="2" name="diaAdm" class="data" id="diaAdm" pattern="[0-3]{1}[0-9]{1}" oninvalid="setCustomValidity('Formato Inválido, digite um valor entre 01 e 31 (valores entre 1 e 9 devem vir acompanhados de um 0 (zero) a esquerda)!')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="dd"/>/
+                <input type="text" maxlength="2" size="2" name="anoAdm" class="data" id="anoAdm" pattern="[0-9]{2}" oninvalid="setCustomValidity('Formato Inválido, digite um ano válido!')" onchange="try{setCustomValidity('')}catch(e){}" placeholder="aa"/>
+                <br>
+                <br>
+                <label for="departamento" class="label">DEPARTAMENTO:</label>
+                <input readonly="true" type="text" name="departamento" value="DCC" class="input" id="departamento"/>
+                <br>
+                <label for="salario" class="label">SALÁRIO:</label>
+                <input type="text" name="salario" class="input" id="salario"/>
+                <br>
+                <label for="curso" class="label">CURSO:</label>
+                <input type="text" name="salario" class="input" id="salario" autocomplete="on"/>
+                <br>
+                <label for="carro" class="label">CARRO:</label>
+                <select name="select" class="sel" id="select" checked>
+                  <option value="vw" class="option"> VOLKSWAGEN</option>
+                  <option value="fiat" class="option"> FIAT</option>
+                  <option value="ford" class="option"> FORD</option>
+                  <option value="chevrolet" class="option"> CHEVROLET</option>
+                  <option value="gm" class="option"> GM</option>
+                </select>
+                <br>
+                <label for="placa" class="label">PLACA:</label>
+                <input type="text" name="placa" class="input" id="placa" pattern="[A-Z]{3}-[0-9]{4}$" oninvalid="setCustomValidity('Formato da Placa Inválido!')" onchange="try{setCustomValidity('')}catch(e){}" />
+                <br>
+              <label for="qntlivros" class="label">QUANTIDADE DE LIVROS:</label>
+                <input type="number" name="qntlivros" min="0" max="6" value="0" class="input" id="qntlivros"/>
+                <br>
+              <label for="anexo" class="label">ENVIAR SUA FOTO:</label>
+                <input multiple type="file" name="anexo" class="input" id="anexo"/>
+                <br>
+              <label for="qntDeSapatos" class="label">QUANTIDADE DE PARES DE SAPATO:</label> 
+                <input type="number" name="qntDeSapatos" min="0" step="2" value="0" class="input" id="qntDeSapatos"/>
+                <br>
+                <input class="button" type="submit" value="ENVIAR">
+                <input class="button" type="reset" value="LIMPAR">
+                <input class="button" type="submit" value="ENVIAR PARA NOVA ABA" onclick="google.com">
+              </form>
+            </body>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
